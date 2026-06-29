@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Modern Todo App</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+<div class="background">
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+</div>
+
+<div class="container">
+
+    <div class="app">
+
+        <header>
+
+            <h1>Todo Planner</h1>
+
+            <p>
+                Organize your day efficiently
+            </p>
+
+        </header>
+
+        <div class="clock">
+
+            <span id="currentDate"></span>
+
+            <span id="currentTime"></span>
+
+        </div>
+
+        <div class="task-form">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a task...">
+
+            <input
+                type="date"
+                id="taskDate">
+
+            <input
+                type="time"
+                id="taskTime">
+
+            <button id="addTask">
+
+                Add Task
+
+            </button>
+
+        </div>
+
+        <div class="toolbar">
+
+            <input
+                type="text"
+                id="searchTask"
+                placeholder="Search tasks...">
+
+            <select id="filterTask">
+
+                <option value="all">All</option>
+
+                <option value="active">Active</option>
+
+                <option value="completed">Completed</option>
+
+                <option value="overdue">Overdue</option>
+
+            </select>
+
+            <select id="sortTask">
+
+                <option value="newest">Newest</option>
+
+                <option value="oldest">Oldest</option>
+
+                <option value="date">Due Date</option>
+
+                <option value="alphabet">Alphabetical</option>
+
+            </select>
+
+        </div>
+
+        <div class="progress-card">
+
+            <div class="progress-info">
+
+                <span id="taskCounter">
+
+                    0 Tasks
+
+                </span>
+
+                <span id="progressPercent">
+
+                    0%
+
+                </span>
+
+            </div>
+
+            <div class="progress">
+
+                <div id="progressBar"></div>
+
+            </div>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <h2 id="totalTasks">0</h2>
+
+                <span>Total</span>
+
+            </div>
+
+            <div class="stat">
+
+                <h2 id="activeTasks">0</h2>
+
+                <span>Active</span>
+
+            </div>
+
+            <div class="stat">
+
+                <h2 id="completedTasks">0</h2>
+
+                <span>Completed</span>
+
+            </div>
+
+            <div class="stat">
+
+                <h2 id="overdueTasks">0</h2>
+
+                <span>Overdue</span>
+
+            </div>
+
+        </div>
+
+        <div
+            id="taskList"
+            class="task-list">
+
+        </div>
+
+        <div class="actions">
+
+            <button id="clearCompleted">
+
+                Clear Completed
+
+            </button>
+
+            <button id="deleteAll">
+
+                Delete All
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div
+    id="toast"
+    class="toast">
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
