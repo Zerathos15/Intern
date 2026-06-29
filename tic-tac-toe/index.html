@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Modern Tic Tac Toe</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+<div class="background">
+
+    <div class="blob blob1"></div>
+
+    <div class="blob blob2"></div>
+
+    <div class="blob blob3"></div>
+
+</div>
+
+<div class="container">
+
+    <div class="game-card">
+
+        <h1>Tic Tac Toe</h1>
+
+        <div class="top-panel">
+
+            <div class="mode-box">
+
+                <label>Mode</label>
+
+                <select id="mode">
+
+                    <option value="bot">
+                        Player vs Bot
+                    </option>
+
+                    <option value="friend">
+                        Player vs Player
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="difficulty-box">
+
+                <label>Difficulty</label>
+
+                <select id="difficulty">
+
+                    <option value="easy">
+                        Easy
+                    </option>
+
+                    <option value="medium">
+                        Medium
+                    </option>
+
+                    <option value="hard">
+                        Hard
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div
+            class="status"
+            id="status">
+
+            Player X Turn
+
+        </div>
+
+        <div
+            class="board"
+            id="board">
+
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+
+            <div
+                id="winLine">
+            </div>
+
+        </div>
+
+        <div class="scoreboard">
+
+            <div class="score">
+
+                <span>X</span>
+
+                <h2 id="xScore">0</h2>
+
+            </div>
+
+            <div class="score">
+
+                <span>Draw</span>
+
+                <h2 id="drawScore">0</h2>
+
+            </div>
+
+            <div class="score">
+
+                <span>O</span>
+
+                <h2 id="oScore">0</h2>
+
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+            <button id="restart">
+
+                Restart Round
+
+            </button>
+
+            <button id="reset">
+
+                Reset Scores
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<audio
+    id="clickSound"
+    src="sounds/click.mp3">
+</audio>
+
+<audio
+    id="winSound"
+    src="sounds/win.mp3">
+</audio>
+
+<audio
+    id="loseSound"
+    src="sounds/lose.mp3">
+</audio>
+
+<audio
+    id="drawSound"
+    src="sounds/draw.mp3">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
